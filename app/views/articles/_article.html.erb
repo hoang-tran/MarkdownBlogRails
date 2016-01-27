@@ -4,8 +4,6 @@
     <p class="card-text"><%= article.body%></p>
   </div>
   <% if showButtonView %>
-    <div class="card-footer">
-      <%= link_to 'View', article_path(article), class: 'btn btn-info'%>
-    </div>
+    <%= link_to 'View details', article_path(article), class: 'btn btn-link'%>
   <%end%>
 </div>
