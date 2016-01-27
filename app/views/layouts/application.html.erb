@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<nav class="navbar navbar-light bg-faded">
+  <div class="nav navbar-nav">
+    <%= link_to 'Home', root_path, class: 'nav-item nav-link active'%>
+    <a class="nav-item nav-link" href="#">About</a>
+  </div>
+</nav>
+
 <%= yield %>
 
 </body>
