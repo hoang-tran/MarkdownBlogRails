@@ -3,4 +3,7 @@
     <h4 class="card-title"><%= article.title%></h4>
     <p class="card-text"><%= article.body%></p>
   </div>
+  <div class="card-footer">
+    <%= link_to 'View', article_path(article), class: 'btn btn-info'%>
+  </div>
 </div>
