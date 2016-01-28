@@ -1,6 +1,6 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
 
+  <br>
 
   <% @articles.each do |article| %>
       <%= render article, showButtonView: true, markdown: @markdown %>
