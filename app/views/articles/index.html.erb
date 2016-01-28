@@ -1,7 +1,6 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-  <h1>Hoang's blog</h1>
 
   <% @articles.each do |article| %>
       <%= render article, showButtonView: true, markdown: @markdown %>
@@ -10,5 +9,9 @@
   <br>
 
   <%= link_to 'New Article', new_article_path, class: 'btn btn-primary'%>
+
+  <br>
+
+  <br>
 
 </div>
