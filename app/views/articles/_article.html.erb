@@ -6,6 +6,7 @@
   <% if showButtonView %>
     <%= link_to 'View details', article_path(article), class: 'btn btn-link'%>
   <% else %>
+    <%= link_to 'Back', root_path, class: 'btn btn-link'%>
     <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-link'%>
     <%= link_to 'Delete this article',
                 article_path(article),
