@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'redcarpet'
+gem 'high_voltage', '~> 2.4.0'
 
 group :development, :test do
   gem 'byebug'
