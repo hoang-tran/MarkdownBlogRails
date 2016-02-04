@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-block">
     <%= link_to article.title, article_path(article), class: 'btn btn-link hoang'%>
-    <p><i><%= 'Created at ' + time_ago_in_words(article.created_at) + ' ago' %></i></p>
+    <p class="created-at-label"><i><%= 'Created at ' + time_ago_in_words(article.created_at) + ' ago' %></i></p>
     <% if article.feature_image %>
       <img src="<%= article.feature_image %>" class="img-fluid">
     <% end %>
-    <p class="card-text"><%= markdown.render(article.body).html_safe %></p>
+    <p class="card-text body"><%= markdown.render(article.body).html_safe %></p>
   </div>
   <% if !showButtonView %>
     <%= link_to 'Back', root_path, class: 'btn btn-link'%>

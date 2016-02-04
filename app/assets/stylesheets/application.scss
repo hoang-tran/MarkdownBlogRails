@@ -1,7 +1,17 @@
 @import "bootstrap";
 
+.card-block {
+  padding-bottom: 0px;
+}
+
 .btn.btn-link.hoang {
+  margin-top: -27px;
   margin-left: -18px;
   font-size: 40px;
   color: black;
+}
+
+.created-at-label {
+  font-size: 12px;
+  margin-top: -10px;
 }
