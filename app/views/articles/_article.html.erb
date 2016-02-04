@@ -1,6 +1,7 @@
 <div class="card">
   <div class="card-block">
     <h4 class="card-title"><%= article.title%></h4>
+    <p><i><%= I18n.l article.created_at, format: :short %></i></p>
     <% if article.feature_image %>
       <img src="<%= article.feature_image %>" class="img-fluid">
     <% end %>
