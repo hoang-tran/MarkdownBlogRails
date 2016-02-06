@@ -1,0 +1,12 @@
+<div class="container">
+
+  <br>
+
+  <% @articles.each do |article| %>
+      <% article.body = truncate(article.body, length: 320) %>
+      <%= render article, showButtonView: true, markdown: @markdown %>
+  <% end %>
+
+  <br>
+
+</div>
