@@ -2,6 +2,7 @@
   <div class="card-block">
     <%= link_to article.title, article_path(article), class: 'btn btn-link hoang'%>
     <p class="created-at-label"><i><%= 'Created at ' + time_ago_in_words(article.created_at) + ' ago' %></i></p>
+    <p class="view-count-label"><%= article.view_count%></p>
     <% if article.feature_image %>
       <img src="<%= article.feature_image %>" class="img-fluid">
     <% end %>
