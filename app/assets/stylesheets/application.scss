@@ -11,6 +11,14 @@
   color: black;
 }
 
+.btn.btn-info.in-form {
+  margin-bottom: 20px;
+}
+
+.btn.btn-info {
+  font-size: 12px;
+}
+
 .created-at-label {
   font-size: 12px;
   margin-top: -10px;
@@ -57,4 +65,8 @@
   font-weight: bold;
   color: green;
   margin-top: -17px;
+}
+
+.card-text.tags {
+  margin-bottom: 10px;
 }

@@ -25,8 +25,9 @@
     <%= f.text_area :body %>
   </div>
   <div class="form-group">
-    <%= f.label :tags %><br>
-    <%= render "tags", article: @article %>
+    <%= render "tags", article: @article, custom_class: 'btn btn-info in-form' %>
+    <br>
+    <%= f.label :tags %>
     <input type="text" name="tag_list" data-role="tagsinput" />
   </div>
   <div class="actions">
