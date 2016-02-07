@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.search(params[:q])
+    @articles = @articles.tagged_with(params[:tag], :any => true) if params[:tag].present?
     @articles = @articles.page(params[:page]).per(5)
   end
 
@@ -29,7 +30,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
+    @article.tag_list.add(params[:tag_list], parse: true)
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -44,6 +45,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @article.tag_list.add(params[:tag_list], parse: true)
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }

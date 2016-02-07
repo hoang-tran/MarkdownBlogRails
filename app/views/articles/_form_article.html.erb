@@ -24,6 +24,11 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+  <div class="form-group">
+    <%= f.label :tags %><br>
+    <%= render "tags", article: @article %>
+    <input type="text" name="tag_list" data-role="tagsinput" />
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

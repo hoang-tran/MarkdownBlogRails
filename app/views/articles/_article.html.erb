@@ -7,6 +7,9 @@
       <img src="<%= article.feature_image %>" class="img-fluid">
     <% end %>
     <p class="card-text body"><%= markdown.render(article.body).html_safe %></p>
+    <p class="card-text">
+      <%= render "tags", article: article %>
+    </p>
   </div>
   <% if !showButtonView %>
     <%= link_to 'Back', root_path, class: 'btn btn-link'%>
