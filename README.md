@@ -33,7 +33,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](http://i.imgur.com/6oVds4q.gifv)
+Video Walkthrough: http://i.imgur.com/6oVds4q.gifv
+
+Please click on the above link to see the walkthrough because:
+
+* `gif` file that is larger than 10MB will automatically be converted into `gifv` format
+
+* Github does not support `gifv` extension as stated here https://github.com/github/markup/issues/458)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -43,7 +49,7 @@ Describe any challenges encountered while building the app: Tet is coming :wink:
 
 ## License
 
-    Copyright 2015 HoaNguyen-Handsome
+    Copyright 2015 HoangTran-Simplog
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
