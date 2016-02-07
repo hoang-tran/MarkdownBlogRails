@@ -12,6 +12,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'redcarpet'
 gem 'high_voltage', '~> 2.4.0'
 gem 'kaminari'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem 'byebug'
