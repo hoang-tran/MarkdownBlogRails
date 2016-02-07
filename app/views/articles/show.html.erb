@@ -4,4 +4,8 @@
 
   <%= render @article, showButtonView: false, markdown: @markdown %>
 
+  <% @article.comments.each do |comment| %>
+      <%= render comment, markdown: @markdown %>
+  <% end %>
+
  </div>
