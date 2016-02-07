@@ -13,7 +13,7 @@
 
     <p class="tiny-label"><%= article.details_string %></p>
     <% if article.feature_image %>
-      <img src="<%= article.feature_image %>" class="img-fluid">
+      <img src="<%= article.feature_image %>" class="img-fluid" style="max-height: 500px;">
     <% end %>
     <p class="card-text body"><%= markdown.render(article.body).html_safe %></p>
 
