@@ -4,8 +4,21 @@
 
   <%= render @article, showButtonView: false, markdown: @markdown %>
 
-  <% @article.comments.each do |comment| %>
-      <%= render comment, markdown: @markdown %>
+  <% if @article.comments.count > 0 %>
+    <br>
+    <br>
+    <h3>Comments</h3>
+    <% @article.comments.each do |comment| %>
+        <%= render comment, markdown: @markdown %>
+    <% end %>
   <% end %>
+  <br>
+  <br>
+  <h3>Your comment</h3>
+  <div class="card">
+    <div class="card-block">
+      <%= render 'form_comment' %>
+    </div>
+  </div>
 
  </div>
