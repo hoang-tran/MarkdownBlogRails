@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :set_markdown, only: [:show, :index, :search]
+  before_action :set_markdown, only: [:show, :index]
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.page(params[:page]).per(5)
+    @articles = Article.search(params[:q])
+    @articles = @articles.page(params[:page]).per(5)
   end
 
   # GET /articles/1
@@ -12,7 +13,6 @@ class ArticlesController < ApplicationController
   def show
     @article.view_count += 1
     @article.save
-
     @comment = Comment.new
   end
 
@@ -62,15 +62,6 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
-    end
-  end
-
-  def search
-    query = params[:q]
-    if query
-      @articles = Article.where('title LIKE ?', "%#{query}%").all
-    else
-      @articles = Article.all
     end
   end
 
